@@ -1,6 +1,6 @@
 # Banner-Pro
 
-A modular Termux banner and shell startup customization toolkit.
+A modular Linux/Termux Theme colour Designs, Banner Designs and Arrow Prompt Designs customization toolkit. This is also auto Shell setup function. Up to 10 Theme, Banner and Arrow Prompt Design Options.
 
 ## Project architecture
 
@@ -33,7 +33,7 @@ This repository currently contains working example implementations and ASCII-art
 ### Setup
 
 ```bash
-cd ~/Banner-Pro
+cd ~/T-Pro
 chmod +x banner-setup.sh requirements.sh effect.sh
 chmod +x banner-logo/*.sh banner-logo/Arts/*.sh
 ./requirements.sh
@@ -54,4 +54,4 @@ The setup menu supports Bash and Zsh startup hooks and keeps the active banner i
 
 The ASCII art in `Arts/` is intentionally stored as text inside shell scripts for now. It can later be replaced with dedicated `.txt` assets without changing the overall project architecture.
 
-Banner-Pro is designed for Termux and uses standard shell utilities plus optional Termux packages.
+T-Pro is designed for Termux and uses standard shell utilities plus optional Termux packages.
