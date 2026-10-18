@@ -5,7 +5,7 @@ A modular Termux banner and shell startup customization toolkit.
 ## Project architecture
 
 ```text
-Banner-Pro/
+T-Pro/
 ├── banner-setup.sh
 ├── requirements.sh
 ├── effect.sh
