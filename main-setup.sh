@@ -2,10 +2,10 @@
 # ==============================================================================
 # Project: T-Pro Setup Tool
 # Location: $HOME/T-Pro/main-setup.sh
-# Repo: github.com/<your-user>/T-Pro
+# Repo: github.com/techno-marmu/T-Pro
 # Version: 5.0 (HYBRID EDITION — T-Pro)
-# Description: Merged V1 (banner generator + prompt + smart zsh detection)
-#              + V2 (preview engine + apply confirmation + legacy cleanup)
+# Description: (Terminal theme and banner generator + arrow prompt + smart zsh detection)
+#              preview engine + apply confirmation + legacy cleanup)
 # Platform: Termux / Linux
 # ==============================================================================
 
@@ -317,12 +317,12 @@ apply_banner() {
 show_header() {
     clear
     echo -e "${CYAN}${BOLD}"
-    echo "   ████████╗    ██████╗ ██████╗  ██████╗ "
-    echo "   ╚══██╔══╝    ██╔══██╗██╔══██╗██╔═══██╗"
-    echo "      ██║ █████╗██████╔╝██████╔╝██║   ██║"
-    echo "      ██║ ╚════╝██╔═══╝ ██╔══██╗██║   ██║"
-    echo "      ██║       ██║     ██║  ██║╚██████╔╝"
-    echo "      ╚═╝       ╚═╝     ╚═╝  ╚═╝ ╚═════╝ "
+    echo " ████████╗      ██████╗  ██████╗   ██████╗ "
+    echo " ╚══██╔══╝      ██╔══██╗██╔══██╗██╔═══██╗"
+    echo "      ██║ █████╗██████╔╝██████╔╝██║     ██║"
+    echo "      ██║ ╚════╝██╔═══╝ ██╔══██╗ ██║     ██║"
+    echo "      ██║           ██║        ██║   ██║╚██████╔╝"
+    echo "     ╚═╝           ╚═╝        ╚═╝   ╚═╝  ╚═════╝ "
     echo -e "${RESET}"
     echo -e "${PINK}${BOLD}  ◤ SYS.STATUS ◢ ${GREEN}● ONLINE${RESET}   ${PINK}${BOLD}◤ VER ◢ ${CYAN}v5.0 HYBRID${RESET}   ${PINK}${BOLD}◤ REPO ◢ ${ORANGE}T-Pro${RESET}"
     echo ""
@@ -334,51 +334,37 @@ show_header() {
 show_menu() {
     show_header
 
-    # ── BANNER ARSENAL ──
-    echo -e "${ORANGE}${BOLD}  ╱▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔╲${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}  ${CYAN}${BOLD}⟨ BANNER ARSENAL ⟩${RESET}                                             ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  ├──────────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}                                                                  ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 01${RESET}  ${CYAN}👽  Alien${RESET}              ${WHITE}▸ Extraterrestrial${RESET}     ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 02${RESET}  ${CYAN}💀  Hacker${RESET}             ${WHITE}▸ Terminal Override${RESET}    ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 03${RESET}  ${CYAN}📡  Cyber Matrix${RESET}       ${WHITE}▸ Digital Rain${RESET}         ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 04${RESET}  ${CYAN}🐺  Wolf${RESET}               ${WHITE}▸ Lone Predator${RESET}        ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 05${RESET}  ${CYAN}🕷️   Spider${RESET}             ${WHITE}▸ Web Weaver${RESET}           ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 06${RESET}  ${CYAN}🦇  Bat${RESET}                ${WHITE}▸ Night Shadow${RESET}         ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 07${RESET}  ${CYAN}🦞  Lobster${RESET}            ${WHITE}▸ Deep Claw${RESET}            ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 08${RESET}  ${CYAN}💀  Matrix Skull${RESET}       ${WHITE}▸ Neon Reaper${RESET}          ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 09${RESET}  ${CYAN}🐉  Cyber Dragon${RESET}       ${WHITE}▸ Chrome Wyrm${RESET}          ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}   ${GREEN}${BOLD}⟩⟩ 10${RESET}  ${CYAN}✒️   Name / System${RESET}      ${WHITE}▸ Personal Sigil${RESET}       ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  │${RESET}                                                                  ${ORANGE}${BOLD}│${RESET}"
-    echo -e "${ORANGE}${BOLD}  ╲▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁╱${RESET}"
+    # Banner Arsenal (Rounded Sleek 2-Column Cyber Grid)
+    echo -e "${ORANGE}${BOLD}  ╭──────────────────────────────────────────────────────────────╮${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${RESET}                 ${LIME}${BOLD}⚡  BANNER ARSENAL  ⚡${RESET}                    ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${WHITE} ⟩⟩  ${GREEN}${BOLD}01${RESET} ${CYAN}👽 Alien${RESET}         ${ORANGE}│${WHITE} ⟩⟩  ${GREEN}${BOLD}06${RESET} ${CYAN}🦇 Bat${RESET}               ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${WHITE} ⟩⟩  ${GREEN}${BOLD}02${RESET} ${CYAN}💀 Hacker${RESET}        ${ORANGE}│${WHITE} ⟩⟩  ${GREEN}${BOLD}07${RESET} ${CYAN}🦞 Lobster${RESET}           ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${WHITE} ⟩⟩  ${GREEN}${BOLD}03${RESET} ${CYAN}📡 Cyber Matrix${RESET}  ${ORANGE}│${WHITE} ⟩⟩  ${GREEN}${BOLD}08${RESET} ${CYAN}💀 Matrix Skull${RESET}      ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${WHITE} ⟩⟩  ${GREEN}${BOLD}04${RESET} ${CYAN}🐺 Wolf${RESET}          ${ORANGE}│${WHITE} ⟩⟩  ${GREEN}${BOLD}09${RESET} ${CYAN}🐉 Cyber Dragon${RESET}      ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  │${WHITE} ⟩⟩  ${GREEN}${BOLD}05${RESET} ${CYAN}🕷️ Spider${RESET}        ${ORANGE}│${WHITE} ⟩⟩  ${GREEN}${BOLD}10${RESET} ${CYAN}✒️ Name / System${RESET}     ${ORANGE}${BOLD}│${RESET}"
+    echo -e "${ORANGE}${BOLD}  ╰──────────────────────────────────────────────────────────────╯${RESET}"
     echo ""
 
-    # ── CUSTOMIZATION ──
-    echo -e "${YELLOW}${BOLD}  ╱▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔╲${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}  ${CYAN}${BOLD}⟨ CUSTOMIZATION ⟩${RESET}                                             ${YELLOW}${BOLD}│${RESET}"
-    echo -e "${YELLOW}${BOLD}  ├──────────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}                                                                  ${YELLOW}${BOLD}│${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}   ${MAGENTA}${BOLD}⟩⟩ 11${RESET}  ${MAGENTA}🎨  Prompt Design${RESET}     ${WHITE}▸ Arrow Styles${RESET}         ${YELLOW}${BOLD}│${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}   ${MAGENTA}${BOLD}⟩⟩ 12${RESET}  ${MAGENTA}🖌️   Terminal Theme${RESET}    ${WHITE}▸ Color Schemes${RESET}        ${YELLOW}${BOLD}│${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}                                                                  ${YELLOW}${BOLD}│${RESET}"
-    echo -e "${YELLOW}${BOLD}  ╲▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁╱${RESET}"
+    # Customization Box (Rounded Corners)
+    echo -e "${YELLOW}${BOLD}  ╭──────────────────────────────────────────────────────────────╮${RESET}"
+    echo -e "${YELLOW}${BOLD}  │${RESET}                 ${PINK}${BOLD}🛠️  CUSTOMIZATION  🛠️${RESET}                   ${YELLOW}${BOLD}│${RESET}"
+    echo -e "${YELLOW}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${YELLOW}${BOLD}  │${RESET}   ${MAGENTA}${BOLD}11${RESET} ${MAGENTA}🎨 Prompt Design${RESET}   ${WHITE}│${RESET}   ${MAGENTA}${BOLD}12${RESET} ${MAGENTA}🖌️ Terminal Theme${RESET}   ${YELLOW}${BOLD}│${RESET}"
+    echo -e "${YELLOW}${BOLD}  ╰──────────────────────────────────────────────────────────────╯${RESET}"
     echo ""
 
-    # ── DANGER ZONE ──
-    echo -e "${RED}${BOLD}  ╱▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔╲${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}  ${ORANGE}${BOLD}⟨ DANGER ZONE ⟩${RESET}                                               ${RED}${BOLD}│${RESET}"
-    echo -e "${RED}${BOLD}  ├──────────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}                                                                  ${RED}${BOLD}│${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}   ${ORANGE}${BOLD}⟩⟩ 13${RESET}  ${ORANGE}🔄  Restore Original${RESET}  ${WHITE}▸ Revert Changes${RESET}        ${RED}${BOLD}│${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}   ${ORANGE}${BOLD}⟩⟩ 00${RESET}  ${RED}❌  Exit${RESET}              ${WHITE}▸ Terminate${RESET}            ${RED}${BOLD}│${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}                                                                  ${RED}${BOLD}│${RESET}"
-    echo -e "${RED}${BOLD}  ╲▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁╱${RESET}"
+    # Danger Zone Box (Rounded Corners)
+    echo -e "${RED}${BOLD}  ╭──────────────────────────────────────────────────────────────╮${RESET}"
+    echo -e "${RED}${BOLD}  │${RESET}                 ${ORANGE}${BOLD}⚠️  DANGER ZONE  ⚠️${RESET}                     ${RED}${BOLD}│${RESET}"
+    echo -e "${RED}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${RED}${BOLD}  │${RESET}   ${ORANGE}${BOLD}13${RESET} ${ORANGE}🔄 Restore Original${RESET} ${WHITE}│${RESET}   ${RED}${BOLD}00${RESET} ${RED}❌ Exit${RESET}             ${RED}${BOLD}│${RESET}"
+    echo -e "${RED}${BOLD}  ╰──────────────────────────────────────────────────────────────╯${RESET}"
     echo ""
 
-    # ── Input Prompt ──
-    echo -ne "${ORANGE}${BOLD}  ╭─[${CYAN}root@t-pro${ORANGE}]─[${PINK}~${ORANGE}]${RESET}\n${ORANGE}${BOLD}  ╰──► ${RESET}"
+    # Input Prompt
+    echo -ne "${ORANGE}${BOLD}  ╭─[${CYAN}${BOLD}Collect Menu Option & Enter Number${ORANGE}]─[${PINK}~${ORANGE}]${RESET}\n${ORANGE}${BOLD}  ╰──► ${RESET}"
 }
-
 # ==========================================
 # 🔁 MAIN LOOP
 # ==========================================
