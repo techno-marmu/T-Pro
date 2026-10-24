@@ -7,6 +7,9 @@
 # Description: (Terminal theme and banner generator + arrow prompt + smart zsh detection)
 #              preview engine + apply confirmation + legacy cleanup)
 # Platform: Termux / Linux
+# Developer: M A R M U (Own Creation)
+# Logic & Architecture: MarMu 
+# Facebook Page: TECHONOLOGY BY MARMU
 # ==============================================================================
 
 # ==========================================
