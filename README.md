@@ -1,40 +1,38 @@
 # T-Pro
 
-A modular Linux/Termux Theme colour Designs, Banner Designs and Arrow Prompt Designs customization toolkit. This is also auto Shell setup function. Up to 10 Theme, Banner and Arrow Prompt Design Options.
+## ✨ Features
+- 10+ built-in banner arts (Alien, Hacker, Cyber Matrix, ...)
+- Interactive banner preview before applying
+- Smart Bash + Zsh hook engine with legacy cleanup
+- Custom ASCII name generator (figlet + lolcat)
+- Arrow prompt design & terminal theme manager
+- Safe backup & one-command restore
+- A modular Linux/Termux Theme colour Designs, Banner Designs and Arrow Prompt Designs customization toolkit. This is also auto Shell setup function. Up to 10 Theme, Banner and Arrow Prompt Design Options.
 
 ## Project architecture
 
 ```text
 T-Pro/
-├── install.sh                  
-├── uninstall.sh                
-├── main-setup.sh               
-├── requirements.sh             
-├── LICENSE                     
-├── README.md                                 
-│
-├── banner-logo/
-│   ├── effect.sh               
-│   ├── arrow-design.sh         
-│   ├── theme.sh                
-│   ├── restore-original.sh     
-│   ├── name.sh                
-│   ├── cyber.sh               
-│   ├── cyber-matrix.sh         
-│   └── Arts/
-│       ├── alien.sh           
-│       ├── hacker.sh          
-│       ├── wolf.sh            
-│       ├── spider.sh          
-│       ├── bat.sh              
-│       ├── lobster.sh          
-│       ├── matrix-skull.sh     
-│       └── cyber-dragon.sh    
-│
-└── docs/
-    └── screenshots/
-        ├── arrow-design.png    
-        └── theme-menu.png      
+├── README.md
+├── LICENSE
+├── main-setup.sh                   
+├── install.sh                       ← Quick Setup installer (optional)
+└── banner-logo/
+    ├── effect.sh
+    ├── loading-effect.sh
+    ├── arrow-design.sh
+    ├── theme.sh
+    ├── restore-original.sh
+    └── Arts/
+        ├── alien.sh
+        ├── hacker.sh
+        ├── cyber.sh
+        ├── wolf.sh
+        ├── spider.sh
+        ├── bat.sh
+        ├── lobster.sh
+        ├── matrix-skull.sh
+        └── cyber-dragon.sh
 ```
 
 ## Current stage
@@ -66,3 +64,16 @@ The setup menu supports Bash and Zsh startup hooks and keeps the active banner i
 The ASCII art in `Arts/` is intentionally stored as text inside shell scripts for now. It can later be replaced with dedicated `.txt` assets without changing the overall project architecture.
 
 T-Pro is designed for Termux and uses standard shell utilities plus optional Termux packages.
+
+# 🎨 T-Pro Is Termux Terminal Customizer
+
+Hybrid Edition v5.0 — Banner Preview + Cross-Shell Hooks + Prompt/Theme Manager
+
+
+## 🚀 Install
+
+```bash
+git clone https://github.com/<your-user>/T-Pro.git
+cd T-Pro
+chmod +x main-setup.sh
+bash main-setup.sh
