@@ -1,4 +1,4 @@
-# Banner-Pro
+# T-Pro
 
 A modular Linux/Termux Theme colour Designs, Banner Designs and Arrow Prompt Designs customization toolkit. This is also auto Shell setup function. Up to 10 Theme, Banner and Arrow Prompt Design Options.
 
@@ -6,24 +6,35 @@ A modular Linux/Termux Theme colour Designs, Banner Designs and Arrow Prompt Des
 
 ```text
 T-Pro/
-├── banner-setup.sh
-├── requirements.sh
-├── effect.sh
-├── README.md
-├── main-setup.sh
-└── banner-logo/
-    ├── restore-original.sh
-    ├── cyber.sh
-    ├── name.sh
-    └── Arts/
-        ├── alien.sh
-        ├── hacker.sh
-        ├── cyber-dragon.sh
-        ├── wolf.sh
-        ├── matrix-skull.sh
-        ├── spider.sh
-        ├── bat.sh
-        └── lobster.sh
+├── install.sh                  
+├── uninstall.sh                
+├── main-setup.sh               
+├── requirements.sh             
+├── LICENSE                     
+├── README.md                                 
+│
+├── banner-logo/
+│   ├── effect.sh               
+│   ├── arrow-design.sh         
+│   ├── theme.sh                
+│   ├── restore-original.sh     
+│   ├── name.sh                
+│   ├── cyber.sh               
+│   ├── cyber-matrix.sh         
+│   └── Arts/
+│       ├── alien.sh           
+│       ├── hacker.sh          
+│       ├── wolf.sh            
+│       ├── spider.sh          
+│       ├── bat.sh              
+│       ├── lobster.sh          
+│       ├── matrix-skull.sh     
+│       └── cyber-dragon.sh    
+│
+└── docs/
+    └── screenshots/
+        ├── arrow-design.png    
+        └── theme-menu.png      
 ```
 
 ## Current stage
