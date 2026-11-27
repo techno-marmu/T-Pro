@@ -1,5 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/bash
-# Location: $HOME/Banner-Pro/banner-logo/arrow-design.sh
+# !/bin/bash
+# Location: $HOME/T-Pro/banner-logo/arrow-design.sh
+# Design By MarMu 
 
 # Colors
 CYAN="\e[1;36m"
@@ -10,7 +11,7 @@ MAGENTA="\e[1;35m"
 RESET="\e[0m"
 
 # Loading Effect ကို ချိတ်ဆက်ခြင်း
-source "$HOME/Banner-Pro/banner-logo/loading-effect.sh"
+source "$HOME/T-Pro/banner-logo/show-effect.sh"
 
 clear
 echo -e "${CYAN}╔══════════════════════════════════════════════════╗${RESET}"
