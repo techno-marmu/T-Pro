@@ -123,20 +123,20 @@ ask_arrow_design() {
 # ==========================================
 # 🖌️ THEME HELPER (Y/N → launch)
 # ==========================================
-ask_theme() {
-    echo ""
-    print_info "Do you want to change the Terminal Theme?"
-    IFS= read -r -p "  👉 Choose (Y/N): " tc
-    if [[ "$tc" =~ ^[Yy]([Ee][Ss])?$ ]]; then
-        if [ -f "$DIR/banner-logo/theme.sh" ]; then
-            bash "$DIR/banner-logo/theme.sh"
-        else
-            print_error "theme.sh not found in $DIR/banner-logo/"
-        fi
-    else
-        print_info "Skipped terminal theme."
-    fi
-}
+#ask_theme() {
+#    echo ""
+#    print_info "Do you want to change the Terminal Theme?"
+#    IFS= read -r -p "  👉 Choose (Y/N): " tc
+#    if [[ "$tc" =~ ^[Yy]([Ee][Ss])?$ ]]; then
+#        if [ -f "$DIR/banner-logo/theme.sh" ]; then
+#            bash "$DIR/banner-logo/theme.sh"
+#        else
+#            print_error "theme.sh not found in $DIR/banner-logo/"
+#        fi
+#    else
+#        print_info "Skipped terminal theme."
+#    fi
+#}
 
 # ==========================================
 # 🧹 LEGACY HOOK CLEANUP (multi-brand)
@@ -148,15 +148,6 @@ clean_legacy_hooks() {
     # T-Pro (current)
     sed -i '/# T-PRO HOOK START/,/# T-PRO HOOK END/d'           "$rc_file" 2>/dev/null
     sed -i '/# T-PRO PROMPT START/,/# T-PRO PROMPT END/d'       "$rc_file" 2>/dev/null
-    # Legacy: Tmux-Pro
-    sed -i '/# TMUX-PRO HOOK START/,/# TMUX-PRO HOOK END/d'     "$rc_file" 2>/dev/null
-    sed -i '/# TMUX-PRO PROMPT START/,/# TMUX-PRO PROMPT END/d' "$rc_file" 2>/dev/null
-    # Legacy: Banner-Pro
-    sed -i '/# BANNER-PRO HOOK START/,/# BANNER-PRO HOOK END/d' "$rc_file" 2>/dev/null
-    sed -i '/# BANNER-PRO START/,/# BANNER-PRO END/d'           "$rc_file" 2>/dev/null
-    # Legacy: T-Pro (old short form)
-    sed -i '/# TPRO HOOK START/,/# TPRO HOOK END/d'             "$rc_file" 2>/dev/null
-    sed -i '/# TMUX_PRO_CONFIG/d'                                "$rc_file" 2>/dev/null
 }
 
 # ==========================================
@@ -353,15 +344,17 @@ show_menu() {
     echo -e "${YELLOW}${BOLD}  ╭──────────────────────────────────────────────────────────────╮${RESET}"
     echo -e "${YELLOW}${BOLD}  │${RESET}                 ${PINK}${BOLD}🛠️  CUSTOMIZATION  🛠️${RESET}                   ${YELLOW}${BOLD}│${RESET}"
     echo -e "${YELLOW}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${YELLOW}${BOLD}  │${RESET}   ${MAGENTA}${BOLD}11${RESET} ${MAGENTA}🎨 Prompt Design${RESET}   ${WHITE}│${RESET}   ${MAGENTA}${BOLD}12${RESET} ${MAGENTA}🖌️ Terminal Theme${RESET}   ${YELLOW}${BOLD}│${RESET}"
+    echo -e "${YELLOW}${BOLD}  │${RESET}   ${MAGENTA}${BOLD}11${RESET} ${MAGENTA}🎨 ⟩⟩ Arrow Prompt Design ⟨⟨${RESET}   ${WHITE}│${RESET}   ${MAGENTA}${BOLD}12${RESET} ${MAGENTA}🖌️ Terminal Theme${RESET}   ${YELLOW}${BOLD}│${RESET}"
     echo -e "${YELLOW}${BOLD}  ╰──────────────────────────────────────────────────────────────╯${RESET}"
     echo ""
 
     # Danger Zone Box (Rounded Corners)
     echo -e "${RED}${BOLD}  ╭──────────────────────────────────────────────────────────────╮${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}                 ${ORANGE}${BOLD}⚠️  DANGER ZONE  ⚠️${RESET}                     ${RED}${BOLD}│${RESET}"
+    echo -e "${RED}${BOLD}  │${RESET}                 ${ORANGE}${BOLD}⚠️  CLEAR & REMOVE ZONE  ⚠️${RESET}                                    ${RED}${BOLD}│${RESET}"
     echo -e "${RED}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${RED}${BOLD}  │${RESET}   ${ORANGE}${BOLD}13${RESET} ${ORANGE}🔄 Restore Original${RESET} ${WHITE}│${RESET}   ${RED}${BOLD}00${RESET} ${RED}❌ Exit${RESET}             ${RED}${BOLD}│${RESET}"
+    echo -e "${RED}${BOLD}  │${RESET}   ${WHITE}${BOLD}13${RESET} ${ORANGE}🔄 Restore Original${RESET} ${WHITE}│${RESET}   ${RED}${BOLD}14${RESET} ${RED}❌ Exit${RESET}    ${RED}${BOLD}│${RESET}"
+    echo -e "${RED}${BOLD}  ├──────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${RED}${BOLD}  │${RESET}                 ${RED}${BOLD}00${RESET} ${RED}❌ Exit${RESET}                                  ${RED}${BOLD}│${RESET}"
     echo -e "${RED}${BOLD}  ╰──────────────────────────────────────────────────────────────╯${RESET}"
     echo ""
 
@@ -417,7 +410,7 @@ while true; do
             if [ -f "$DIR/banner-logo/theme.sh" ]; then
                 bash "$DIR/banner-logo/theme.sh"
             else
-                print_error "theme.sh not found"
+                print_error "Coming Soon..!! Upgrades version is coming.."
                 sleep 1
             fi
             ;;
